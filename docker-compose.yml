@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  redpanda:
+    container_name: redpanda
+    image: docker.redpanda.com/redpandadata/redpanda:v23.2.19
+
+  console:
+    container_name: redpanda-console
+    image: docker.redpanda.com/redpandadata/redpanda:v23.2.19
+    depends_on:
+      - redpanda
